@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn&Pass – Free Exam Resources for Nigerian Students</title>
+  <meta name="description" content="Learn&Pass is a free educational platform helping secondary and university prospects in Nigeria ace JAMB, WAEC, NECO, and more through practice questions and up-to-date news." />
+  <meta name="keywords" content="JAMB past questions, WAEC practice, NECO, Nigerian students, free exam resources, Learn and Pass" />
+  <meta property="og:title" content="Learn&Pass – Free Exam Resources for Nigerian Students" />
+  <meta property="og:description" content="Practice smarter. Pass faster. Free resources for JAMB, WAEC, NECO & more." />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Learn&Pass",
+    "description": "Free educational resource platform for Nigerian secondary and university prospects.",
+    "url": "https://learnandpass.ng",
+    "areaServed": "Nigeria",
+    "educationalCredentialAwarded": "JAMB, WAEC, NECO, GCE"
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green: { DEFAULT: '#006633', light: '#008844', dark: '#004d26' },
+            gold: { DEFAULT: '#FFCC00', light: '#FFD740', dark: '#E6B800' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #FFCC00; }
+    .btn-primary { background: #FFCC00; color: #006633; font-weight: 700; border-radius: 8px; transition: background 0.2s, transform 0.1s; }
+    .btn-primary:hover { background: #E6B800; transform: translateY(-1px); }
+    .btn-outline { border: 2px solid #FFCC00; color: #FFCC00; font-weight: 700; border-radius: 8px; transition: all 0.2s; }
+    .btn-outline:hover { background: #FFCC00; color: #006633; }
+    .card { background: #fff; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,102,51,0.08); transition: box-shadow 0.2s, transform 0.2s; }
+    .card:hover { box-shadow: 0 8px 32px rgba(0,102,51,0.15); transform: translateY(-2px); }
+    .section { display: none; }
+    .section.active { display: block; }
+    .hero-bg { background: linear-gradient(135deg, #006633 60%, #004d26 100%); }
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: flex; }
+  </style>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="bg-[#006633] sticky top-0 z-50 shadow-lg">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#" onclick="showPage('home')" class="flex items-center gap-2">
+      <span class="text-[#FFCC00] font-extrabold text-xl tracking-tight">Learn<span class="text-white">&</span>Pass</span>
+    </a>
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-6 text-white font-medium text-sm">
+      <a href="#" onclick="showPage('home')" class="nav-link">Home</a>
+      <a href="#" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="#" onclick="showPage('resources')" class="nav-link">Resources</a>
+      <a href="#" onclick="showPage('contact')" class="nav-link">Contact</a>
+      <a href="#" class="btn-primary px-5 py-2 text-sm">Get Started</a>
+    </div>
+    <!-- Mobile Hamburger -->
+    <button onclick="toggleMenu()" class="md:hidden text-white focus:outline-none">
+      <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu flex-col bg-[#004d26] px-4 pb-4 text-white font-medium text-base gap-3">
+    <a href="#" onclick="showPage('home');toggleMenu()" class="block py-2 border-b border-green-700">Home</a>
+    <a href="#" onclick="showPage('about');toggleMenu()" class="block py-2 border-b border-green-700">About</a>
+    <a href="#" onclick="showPage('resources');toggleMenu()" class="block py-2 border-b border-green-700">Resources</a>
+    <a href="#" onclick="showPage('contact');toggleMenu()" class="block py-2">Contact</a>
+    <a href="#" class="btn-primary block text-center py-2 mt-2">Get Started</a>
+  </div>
+</nav>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="home" class="section active">
+  <!-- Hero -->
+  <section class="hero-bg text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="bg-[#FFCC00] text-[#006633] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">🇳🇬 Nigeria's #1 Free Study Platform</span>
+      <h1 class="mt-5 text-3xl md:text-5xl font-extrabold leading-tight">Practice Smarter.<br/>Pass Faster. <span class="text-[#FFCC00]">For Free.</span></h1>
+      <p class="mt-4 text-base md:text-lg text-green-100 max-w-2xl mx-auto">Thousands of past questions for JAMB, WAEC, NECO & more — plus daily educational news to keep you ahead of the curve.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" onclick="showPage('resources')" class="btn-primary px-8 py-3 text-base">Start Practicing →</a>
+        <a href="#" class="btn-outline px-8 py-3 text-base">Latest News</a>
+      </div>
+      <div class="mt-10 grid grid-cols-3 gap-4 max-w-sm mx-auto text-center">
+        <div><p class="text-2xl font-extrabold text-[#FFCC00]">50K+</p><p class="text-xs text-green-100">Questions</p></div>
+        <div><p class="text-2xl font-extrabold text-[#FFCC00]">10K+</p><p class="text-xs text-green-100">Students</p></div>
+        <div><p class="text-2xl font-extrabold text-[#FFCC00]">100%</p><p class="text-xs text-green-100">Free</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exam Types -->
+  <section class="py-14 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-[#006633]">Exam Types We Cover</h2>
+      <p class="text-center text-gray-500 mt-2 mb-8">Everything you need — in one place.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="card p-5 text-center">
+          <div class="text-4xl mb-2">📝</div>
+          <h3 class="font-bold text-[#006633]">JAMB</h3>
+          <p class="text-xs text-gray-500 mt-1">UTME & DE</p>
+        </div>
+        <div class="card p-5 text-center">
+          <div class="text-4xl mb-2">📚</div>
+          <h3 class="font-bold text-[#006633]">WAEC</h3>
+          <p class="text-xs text-gray-500 mt-1">WASSCE & GCE</p>
+        </div>
+        <div class="card p-5 text-center">
+          <div class="text-4xl mb-2">🎓</div>
+          <h3 class="font-bold text-[#006633]">NECO</h3>
+          <p class="text-xs text-gray-500 mt-1">SSCE & BECE</p>
+        </div>
+        <div class="card p-5 text-center">
+          <div class="text-4xl mb-2">🌍</div>
+          <h3 class="font-bold text-[#006633]">TOEFL</h3>
+          <p class="text-xs text-gray-500 mt-1">International</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="py-14 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-[#006633]">How It Works</h2>
+      <p class="text-center text-gray-500 mt-2 mb-10">Three simple steps to your success story.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-6 text-center border-t-4 border-[#FFCC00]">
+          <div class="w-12 h-12 bg-[#006633] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-bold text-lg text-[#006633]">Create Account</h3>
+          <p class="text-sm text-gray-500 mt-2">Sign up free with your email. No credit card required.</p>
+        </div>
+        <div class="card p-6 text-center border-t-4 border-[#FFCC00]">
+          <div class="w-12 h-12 bg-[#006633] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-bold text-lg text-[#006633]">Pick Your Exam</h3>
+          <p class="text-sm text-gray-500 mt-2">Choose from JAMB, WAEC, NECO, and more.</p>
+        </div>
+        <div class="card p-6 text-center border-t-4 border-[#FFCC00]">
+          <div class="w-12 h-12 bg-[#006633] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-bold text-lg text-[#006633]">Practice & Pass</h3>
+          <p class="text-sm text-gray-500 mt-2">Access past questions, track progress, read the latest news.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="bg-[#006633] py-12 px-4 text-center">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-white">Ready to Start?</h2>
+    <p class="text-green-100 mt-2 mb-6">Join thousands of students already using Learn&Pass to prepare.</p>
+    <a href="#" class="btn-primary px-10 py-3 text-base inline-block">Get Started — It's Free</a>
+  </section>
+</div>
+
+<!-- ===== ABOUT PAGE ===== -->
+<div id="about" class="section">
+  <section class="hero-bg text-white py-14 px-4 text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold">About <span class="text-[#FFCC00]">Learn&Pass</span></h1>
+    <p class="mt-3 text-green-100 max-w-xl mx-auto">Built for Nigerian students. Powered by dedication. Completely free.</p>
+  </section>
+
+  <section class="py-14 px-4">
+    <div class="max-w-3xl mx-auto space-y-10">
+      <div class="card p-6 md:p-8">
+        <h2 class="text-xl font-bold text-[#006633] mb-3">Our Mission</h2>
+        <p class="text-gray-600 leading-relaxed">Learn&Pass was founded on a simple belief: every Nigerian student deserves access to quality exam preparation resources — regardless of their financial background. We aggregate past questions, model answers, and educational news to level the playing field for secondary school and university-bound students across Nigeria.</p>
+      </div>
+      <div class="card p-6 md:p-8">
+        <h2 class="text-xl font-bold text-[#006633] mb-3">What We Offer</h2>
+        <ul class="space-y-3 text-gray-600">
+          <li class="flex items-start gap-3"><span class="text-[#FFCC00] font-bold text-lg">✓</span> Thousands of past exam questions across major Nigerian exams</li>
+          <li class="flex items-start gap-3"><span class="text-[#FFCC00] font-bold text-lg">✓</span> Daily educational news curated for students</li>
+          <li class="flex items-start gap-3"><span class="text-[#FFCC00] font-bold text-lg">✓</span> A clean, distraction-free study environment</li>
+          <li class="flex items-start gap-3"><span class="text-[#FFCC00] font-bold text-lg">✓</span> Live support chat for every registered student</li>
+        </ul>
+      </div>
+      <div class="card p-6 md:p-8">
+        <h2 class="text-xl font-bold text-[#006633] mb-3">Our Values</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+          <div class="bg-green-50 rounded-xl p-4 text-center">
+            <div class="text-3xl mb-2">🎯</div>
+            <h3 class="font-bold text-[#006633]">Accessibility</h3>
+            <p class="text-xs text-gray-500 mt-1">Free for everyone, always.</p>
+          </div>
+          <div class="bg-yellow-50 rounded-xl p-4 text-center">
+            <div class="text-3xl mb-2">🔬</div>
+            <h3 class="font-bold text-[#006633]">Accuracy</h3>
+            <p class="text-xs text-gray-500 mt-1">Verified content you can trust.</p>
+          </div>
+          <div class="bg-green-50 rounded-xl p-4 text-center">
+            <div class="text-3xl mb-2">🤝</div>
+            <h3 class="font-bold text-[#006633]">Community</h3>
+            <p class="text-xs text-gray-500 mt-1">Students helping students.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== RESOURCES PAGE ===== -->
+<div id="resources" class="section">
+  <section class="hero-bg text-white py-14 px-4 text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold">Exam <span class="text-[#FFCC00]">Resources</span></h1>
+    <p class="mt-3 text-green-100 max-w-xl mx-auto">Browse our full library of past questions and study materials.</p>
+  </section>
+
+  <section class="py-14 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- JAMB -->
+        <div class="card p-6 border-l-4 border-[#006633]">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">📝</span>
+            <div>
+              <h3 class="font-extrabold text-xl text-[#006633]">JAMB / UTME</h3>
+              <span class="text-xs text-gray-400">Joint Admissions & Matriculation Board</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Access over 15,000 JAMB past questions across all subjects — Mathematics, English, Physics, Chemistry, Biology, Economics, and more. Practice by year or subject.</p>
+          <ul class="text-xs text-gray-500 space-y-1 mb-5">
+            <li>✅ 2000–2024 Past Questions</li>
+            <li>✅ Detailed Answers & Explanations</li>
+            <li>✅ UTME & Direct Entry Coverage</li>
+          </ul>
+          <a href="#" class="btn-primary px-6 py-2 text-sm inline-block">Access JAMB Questions →</a>
+        </div>
+        <!-- WAEC -->
+        <div class="card p-6 border-l-4 border-[#FFCC00]">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">📚</span>
+            <div>
+              <h3 class="font-extrabold text-xl text-[#006633]">WAEC / WASSCE</h3>
+              <span class="text-xs text-gray-400">West African Examinations Council</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Prepare for WASSCE and GCE with our comprehensive question bank. Covers all core and elective subjects with marking schemes.</p>
+          <ul class="text-xs text-gray-500 space-y-1 mb-5">
+            <li>✅ WASSCE & GCE Past Questions</li>
+            <li>✅ Marking Schemes Included</li>
+            <li>✅ Theory & Objective Coverage</li>
+          </ul>
+          <a href="#" class="btn-primary px-6 py-2 text-sm inline-block">Access WAEC Questions →</a>
+        </div>
+        <!-- NECO -->
+        <div class="card p-6 border-l-4 border-[#006633]">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">🎓</span>
+            <div>
+              <h3 class="font-extrabold text-xl text-[#006633]">NECO / SSCE</h3>
+              <span class="text-xs text-gray-400">National Examinations Council</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Full NECO SSCE and BECE question archives organized by subject and year, with worked solutions and exam tips.</p>
+          <ul class="text-xs text-gray-500 space-y-1 mb-5">
+            <li>✅ SSCE & BECE Coverage</li>
+            <li>✅ Worked Solutions</li>
+            <li>✅ Exam Tips & Strategies</li>
+          </ul>
+          <a href="#" class="btn-primary px-6 py-2 text-sm inline-block">Access NECO Questions →</a>
+        </div>
+        <!-- International -->
+        <div class="card p-6 border-l-4 border-[#FFCC00]">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-4xl">🌍</span>
+            <div>
+              <h3 class="font-extrabold text-xl text-[#006633]">International Exams</h3>
+              <span class="text-xs text-gray-400">TOEFL · GMAT · SAT · IELTS</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Going beyond Nigerian shores? We've got TOEFL, IELTS, SAT, and GMAT prep materials to support your international ambitions.</p>
+          <ul class="text-xs text-gray-500 space-y-1 mb-5">
+            <li>✅ TOEFL & IELTS Practice Tests</li>
+            <li>✅ SAT & GMAT Resources</li>
+            <li>✅ Regularly Updated</li>
+          </ul>
+          <a href="#" class="btn-primary px-6 py-2 text-sm inline-block">Access International →</a>
+        </div>
+      </div>
+
+      <!-- Register CTA -->
+      <div class="mt-12 bg-[#006633] rounded-2xl p-8 text-center text-white">
+        <h2 class="text-2xl font-extrabold mb-2">Ready to Access All Resources?</h2>
+        <p class="text-green-100 mb-6">Create your free account in under 60 seconds — no credit card, no payment, ever.</p>
+        <a href="#" class="btn-primary px-10 py-3 text-base inline-block">Register Free Now →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CONTACT PAGE ===== -->
+<div id="contact" class="section">
+  <section class="hero-bg text-white py-14 px-4 text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold">Contact <span class="text-[#FFCC00]">Us</span></h1>
+    <p class="mt-3 text-green-100 max-w-xl mx-auto">Have a question, suggestion, or just want to say hello? We're here.</p>
+  </section>
+
+  <section class="py-14 px-4">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Form -->
+      <div class="card p-6 md:p-8">
+        <h2 class="text-xl font-bold text-[#006633] mb-5">Send Us a Message</h2>
+        <form onsubmit="handleContact(event)" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+            <input type="text" required placeholder="e.g. Amara Okafor" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#006633] focus:ring-1 focus:ring-[#006633]" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+            <input type="email" required placeholder="you@gmail.com" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#006633] focus:ring-1 focus:ring-[#006633]" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+            <select class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#006633]">
+              <option>General Enquiry</option>
+              <option>Technical Support</option>
+              <option>Content Feedback</option>
+              <option>Partnership</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <textarea required rows="4" placeholder="Write your message here..." class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#006633] focus:ring-1 focus:ring-[#006633] resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full py-3 text-base">Send Message →</button>
+        </form>
+        <div id="form-success" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-[#006633] text-sm font-medium text-center">
+          ✅ Message sent! We'll get back to you within 24 hours.
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-5">
+        <div class="card p-5 flex items-start gap-4">
+          <div class="w-10 h-10 bg-[#006633] rounded-xl flex items-center justify-center text-xl flex-shrink-0">📍</div>
+          <div>
+            <h3 class="font-bold text-[#006633]">Our Location</h3>
+            <p class="text-sm text-gray-500 mt-1">Lagos, Nigeria<br/>Available nationwide</p>
+          </div>
+        </div>
+        <div class="card p-5 flex items-start gap-4">
+          <div class="w-10 h-10 bg-[#006633] rounded-xl flex items-center justify-center text-xl flex-shrink-0">📧</div>
+          <div>
+            <h3 class="font-bold text-[#006633]">Email Us</h3>
+            <p class="text-sm text-gray-500 mt-1">support@learnandpass.ng<br/>Response within 24 hours</p>
+          </div>
+        </div>
+        <div class="card p-5 flex items-start gap-4">
+          <div class="w-10 h-10 bg-[#006633] rounded-xl flex items-center justify-center text-xl flex-shrink-0">💬</div>
+          <div>
+            <h3 class="font-bold text-[#006633]">Live Chat</h3>
+            <p class="text-sm text-gray-500 mt-1">Available for registered users<br/>Mon–Fri, 8am–8pm WAT</p>
+          </div>
+        </div>
+        <div class="card p-5 flex items-start gap-4">
+          <div class="w-10 h-10 bg-[#FFCC00] rounded-xl flex items-center justify-center text-xl flex-shrink-0">📱</div>
+          <div>
+            <h3 class="font-bold text-[#006633]">Social Media</h3>
+            <p class="text-sm text-gray-500 mt-1">@LearnAndPassNG on Twitter, Instagram & Facebook</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-[#004d26] text-white py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+      <div class="col-span-2 md:col-span-1">
+        <p class="text-[#FFCC00] font-extrabold text-lg mb-2">Learn<span class="text-white">&</span>Pass</p>
+        <p class="text-xs text-green-200">Free exam resources for Nigerian students. Practice smarter, pass faster.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-3 text-[#FFCC00]">Platform</p>
+        <ul class="space-y-1 text-xs text-green-200">
+          <li><a href="#" onclick="showPage('home')" class="hover:text-white">Home</a></li>
+          <li><a href="#" onclick="showPage('about')" class="hover:text-white">About</a></li>
+          <li><a href="#" onclick="showPage('resources')" class="hover:text-white">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3 text-[#FFCC00]">Exams</p>
+        <ul class="space-y-1 text-xs text-green-200">
+          <li>JAMB / UTME</li>
+          <li>WAEC / WASSCE</li>
+          <li>NECO / SSCE</li>
+          <li>International</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3 text-[#FFCC00]">Support</p>
+        <ul class="space-y-1 text-xs text-green-200">
+          <li><a href="#" onclick="showPage('contact')" class="hover:text-white">Contact Us</a></li>
+          <li>Privacy Policy</li>
+          <li>Terms of Use</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-green-700 pt-6 text-center text-xs text-green-300">
+      © 2025 Learn&Pass. All rights reserved. Built with ❤️ for Nigerian students.
+    </div>
+  </div>
+</footer>
+
+<script>
+  function showPage(page) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(page).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('open');
+  }
+  function handleContact(e) {
+    e.preventDefault();
+    document.getElementById('form-success').classList.remove('hidden');
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
